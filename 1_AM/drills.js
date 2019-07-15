@@ -4,14 +4,19 @@ const assert = require("assert");
 
 const tokenize = str => {
   // TODO - write a function which converts a multi-word string into an array of words
+  const res = str.split(" ");
+  return(res); 
 };
 
 const reverse = str => {
   // TODO - write a function which reverses the string
+ return(str.split('').reverse().join(''))
 };
 
 const uniqueOnes = arr => {
   // TODO - write a function which returns the inputted array without duplicate elements
+  let unique = [...new Set(arr)];
+  return(unique)
 };
 
 const factorial = num => {
@@ -31,8 +36,13 @@ const unzip = arr => {
 const shiftRight = (str, num) => {
   // TODO - write a function which shifts a string `num` characters to the right
   // Example = shiftThree("Hello") === "lloHe"
+  arr = str.split("")
+  for (let i = 0; i < num; i++) {
+    const l = arr.shift()
+    arr.push(l)
 };
-
+newStr = arr.join("")
+return newStr
 const announceDate = () => {
   // TODO - write a function which returns the current date in the following format:
   // "Today's date is January 7th, 2016. It is eleven thirty-seven in the morning."
@@ -43,4 +53,9 @@ const announceDate = () => {
 assert(1 < 2);
 assert(1 + 2 === 3);
 assert([2, 3][0] === 2);
+console.log(tokenize("Hello I am coding"))
+console.log(reverse("hellokitty"))
+console.log(uniqueOnes(["Xaya", "Xantel", "Xanai", "Xaya"]))
+console.log(shiftRight("Hello", 2))
+
 // asssert (reverse("3df") === "fd3")
